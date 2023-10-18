@@ -1,23 +1,18 @@
 const theme = {
   colors: {
-    primary: '#213547',
-    secondary700: '#747bff',
-    secondary600: '#646cff',
-    secondary500: '#535bf2',
-    third600: '#61dafbaa',
-    whitePrimary: '#ffffff',
-    whiteSecondary: '#f9f9f9',
-    background: '#242424',
-    grey: '#939393',
+    primary: '#3A6150',
+    black: '#000',
+    grey: '#71837B',
+    white: '#fff',
+    blue_grey: '#607085',
+    blue_diopside: '#8392A6',
+    light_grey: '#eeecec',
   },
   fontSizes: {
-    text2xl: 'clamp(5.63rem, calc(5.27rem + 1.79vw), 6.88rem)', // min 90 max 110
-    text46px: 'clamp(2.38rem, calc(2.23rem + 0.71vw), 2.88rem)', // min 38 max 46
-    textXl: 'clamp(1.25rem, calc(1.18rem + 0.36vw), 1.5rem)', //min 20 max 24
-    text20: 'clamp(1.06rem, calc(1.01rem + 0.27vw), 1.25rem)', //min 17 max 20
-    textBase: 'clamp(0.88rem, calc(0.84rem + 0.18vw), 1rem)', // min 14, max 16
-    textXbase: 'clamp(0.81rem, calc(0.78rem + 0.18vw), 0.94rem)', // min 13, max 15
-    textSm: 'clamp(0.75rem, calc(0.71rem + 0.18vw), 0.88rem)', // min 12, max 14
+    head1: 'clamp(2rem, 1.7143rem + 1.4286vw, 3rem)', // min 32 max 46
+    head3: 'clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem)', // min 18 max 24
+    head4: 'clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem)', //min 16 max 18
+    par: 'clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem)', //min 12 max 14
   },
 };
 export default theme;

@@ -1,10 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MouseEventHandler, ReactNode, FC } from 'react';
+import { ReactNode, FC, MouseEventHandler, FormEvent } from 'react';
 import { styled } from 'styled-components';
 interface BtnProps {
   children: ReactNode;
   className?: string;
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?:
+    | MouseEventHandler<HTMLButtonElement>
+    | FormEvent<HTMLFormElement>
+    | any;
   label?: ReactNode;
   icon?: string | undefined;
   isDisabled?: boolean;
@@ -12,14 +15,17 @@ interface BtnProps {
   width?: string;
   height?: string;
   backgroundColor?: string;
+  role?: string;
+  disabled?: boolean;
 }
 const Button: FC<BtnProps> = (props) => {
   return (
     <StyledButton
-      type="button"
+      type={`${props.type || 'button'}`}
       onClick={props.onClick}
       backgroundColor={props.backgroundColor}
-      className={`${props.className}`}>
+      className={`${props.className}`}
+      disabled={props.disabled}>
       {props.children}
     </StyledButton>
   );

@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import Input from './UI/Input';
-import Button from './UI/Button';
 import visaImg from '../assets/images/visa.png';
 import masterCardImg from '../assets/images/mster_card.png';
+import Subscribe from './Subscribe';
 const Footer = () => {
   return (
     <Styled>
@@ -12,12 +11,9 @@ const Footer = () => {
           <h4>
             Subscribe and be the first to know about our news and promotions.
           </h4>
-          <form className="subscribe">
-            <Input placeholder="godofcode@code.com" />
-            <Button>Subscribe</Button>
-          </form>
+          <Subscribe />
         </section>
-        <section className="centralContainer">
+        <nav className="centralContainer">
           <ul>
             <li>
               <a href="#">About Us</a>
@@ -32,8 +28,8 @@ const Footer = () => {
               <a href="#">Site Map</a>
             </li>
           </ul>
-        </section>
-        <section className="rightContainer">
+        </nav>
+        <address className="rightContainer">
           <h4>Contacts</h4>
           <a href="tel:+123456789">
             <p>+1 (234) 567-89</p>
@@ -42,13 +38,10 @@ const Footer = () => {
             <p>godofcode@code.com</p>
           </a>
           <section className="payments">
-            <img src={visaImg} alt="image of a visa paymemnt system" />
-            <img
-              src={masterCardImg}
-              alt="image of a mastercard paymemnt system"
-            />
+            <img src={visaImg} alt="Visa payment system" />
+            <img src={masterCardImg} alt="Mastercard payment system" />
           </section>
-        </section>
+        </address>
       </section>
       <section className="bottomContainer">
         <p>&copy;2023 God_Of_Code, All Rights Reserved</p>
@@ -60,7 +53,7 @@ const Footer = () => {
           </li>
           <li>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              Terms of service
+              Terms of Service
             </a>
           </li>
           <li>
@@ -138,17 +131,21 @@ const Styled = styled.footer`
       }
     }
   }
-  .subscribe {
-    margin-top: 30px;
-    display: flex;
-    gap: 30px;
-    align-items: end;
-    input {
-      width: 308px;
-      border: none;
-      padding: 16px 0;
-      color: ${({ theme }) => theme.colors.grey};
-      border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+  @media (max-width: 975px) {
+    padding: 24px;
+    .topContainer {
+      /* flex-direction: column; */
+      gap: 16px;
+      align-items: center;
+      .leftContainer {
+        margin-bottom: 24px;
+      }
+    }
+    .bottomContainer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
     }
   }
 `;

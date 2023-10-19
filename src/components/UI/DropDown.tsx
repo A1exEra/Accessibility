@@ -79,6 +79,7 @@ export default DropDown;
 
 const Styled = styled.div`
   position: relative;
+  z-index: 999;
   cursor: pointer;
   h3 {
     font-size: ${({ theme }) => theme.fontSizes.head4};

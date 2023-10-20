@@ -30,7 +30,7 @@ const Subscribe = () => {
       <div className={`${emailInputError ? 'invalid' : ''}`}>
         <input
           type="email"
-          id="email"
+          id="email-subscribe"
           value={emailInput}
           onChange={emailInputChangeHandler}
           onBlur={emailInputBlurHandler}
@@ -38,7 +38,6 @@ const Subscribe = () => {
             emailInputError ? 'Enter correct email!' : 'godofcode@code.com'
           } `}
         />
-        {/* {emailInputError && <p className="error-text">Enter correct email!</p>} */}
       </div>
       <Button
         type="submit"
@@ -66,8 +65,10 @@ const Styled = styled.form`
     width: 308px;
     border: none;
     padding: 16px;
-    color: ${({ theme }) => theme.colors.grey};
     border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.blue_grey};
+    }
   }
   .invalid {
     input {
@@ -85,7 +86,6 @@ const Styled = styled.form`
     text-align: center;
   }
   @media (max-width: 975px) {
-    /* padding: 24px; */
     display: flex;
   }
 `;

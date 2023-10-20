@@ -280,6 +280,9 @@ const Styled = styled.form`
       border-radius: 4px;
       border: 2px solid ${({ theme }) => theme.colors.primary};
       padding: 8px;
+      &::placeholder {
+        color: ${({ theme }) => theme.colors.blue_grey};
+      }
     }
   }
   .checkboxContainer {

@@ -7,11 +7,11 @@ import SiderNav from './SideNav';
 import { useEffect, useState } from 'react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  //   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isTablet, setIsTablet] = useState(window.innerWidth <= 1200);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      //   setIsMobile(window.innerWidth <= 768);
       setIsTablet(window.innerWidth <= 1200);
     };
     window.addEventListener('resize', handleResize);
@@ -25,7 +25,7 @@ const Header = () => {
       <img src={logo} alt="Logo of the application" />
       <div className="navItems">
         {!isTablet && <Nav />}
-        {!isMobile && <Search />}
+        {!isTablet && <Search />}
       </div>
       {isTablet && <Burger setIsOpen={setIsOpen} isOpen={isOpen} />}
       {isTablet && <SiderNav isOpen={isOpen} setIsOpen={setIsOpen} />}

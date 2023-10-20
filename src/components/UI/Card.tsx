@@ -8,7 +8,7 @@ const Card = () => {
         alt="A potted plant on a table that is a part of a card element"
       />
       <section className="textSection">
-        <h4>About Us</h4>
+        <h2>About Us</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
           tincidunt posuere eu risus cursus. Senectus sed maecenas viverra
@@ -35,14 +35,22 @@ const Styled = styled.section`
   padding: 24px;
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   gap: 18px;
   color: ${({ theme }) => theme.colors.white};
+  img {
+    height: 230px;
+    width: 180px;
+  }
   .textSection {
     display: flex;
+    flex-grow: 1;
+    flex: 1;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 18px;
     font-family: 'Ubuntu', sans-serif;
-    h4 {
+    h2 {
       font-size: ${({ theme }) => theme.fontSizes.head3};
     }
     p {
@@ -59,7 +67,8 @@ const Styled = styled.section`
   @media (max-width: 780px) {
     flex-direction: column;
     img {
-      height: 289px;
+      width: 100%;
+      object-fit: cover;
     }
   }
 `;

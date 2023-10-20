@@ -12,7 +12,7 @@ const ContactUs = () => {
     <Styled>
       <div className="mainContainer">
         <div className="containerLeft">
-          <h1>Contact Us</h1>
+          <h2>Contact Us</h2>
           <p>
             Fill up the form and ur Team will get back to you within 24 hours.
             Happy to see your message!
@@ -75,14 +75,13 @@ const Styled = styled.section`
     color: ${({ theme }) => theme.colors.black};
     padding: 42px;
     background-image: url(${contactImg});
-    height: 637px;
-    width: 425px;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-bottom-left-radius: 18px;
     border-top-left-radius: 18px;
-    h1 {
+    h2 {
       font-size: ${({ theme }) => theme.fontSizes.head1};
       margin-bottom: 16px;
     }
@@ -115,5 +114,23 @@ const Styled = styled.section`
     border-bottom-right-radius: 18px;
     border-top-right-radius: 18px;
     background: ${({ theme }) => theme.colors.white};
+  }
+  @media (max-width: 870px) {
+    .mainContainer {
+      flex-direction: column;
+      .containerRight {
+        border-radius: 0;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+      }
+      .containerLeft {
+        border-radius: 0;
+        border-top-right-radius: 18px;
+        border-top-left-radius: 18px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 80px 10px;
   }
 `;

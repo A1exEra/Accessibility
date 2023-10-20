@@ -8,9 +8,9 @@ const Footer = () => {
       <section className="topContainer">
         <section className="leftContainer">
           <h1>PlantMe</h1>
-          <h4>
+          <h2>
             Subscribe and be the first to know about our news and promotions.
-          </h4>
+          </h2>
           <Subscribe />
         </section>
         <nav className="centralContainer">
@@ -30,7 +30,7 @@ const Footer = () => {
           </ul>
         </nav>
         <address className="rightContainer">
-          <h4>Contacts</h4>
+          <h3>Contacts</h3>
           <a href="tel:+123456789">
             <p>+1 (234) 567-89</p>
           </a>
@@ -38,7 +38,7 @@ const Footer = () => {
             <p>godofcode@code.com</p>
           </a>
           <section className="payments">
-            <img src={visaImg} alt="Visa payment system" />
+            <img id="visa" src={visaImg} alt="Visa payment system" />
             <img src={masterCardImg} alt="Mastercard payment system" />
           </section>
         </address>
@@ -71,7 +71,7 @@ export default Footer;
 
 const Styled = styled.footer`
   padding: 24px 64px;
-  h4 {
+  h2 {
     font-size: ${({ theme }) => theme.fontSizes.head4};
     font-weight: 400;
   }
@@ -100,12 +100,17 @@ const Styled = styled.footer`
       flex-direction: column;
       gap: 8px;
       a {
-        color: ${({ theme }) => theme.colors.grey};
+        color: ${({ theme }) => theme.colors.blue_grey};
       }
       .payments {
         margin-top: 32px;
         display: flex;
         gap: 36px;
+        align-items: center;
+      }
+      #visa {
+        width: 50px;
+        height: 30px;
       }
     }
   }
@@ -126,7 +131,7 @@ const Styled = styled.footer`
       gap: 16px;
       li {
         a {
-          color: ${({ theme }) => theme.colors.grey};
+          color: ${({ theme }) => theme.colors.blue_grey};
         }
       }
     }
@@ -134,7 +139,6 @@ const Styled = styled.footer`
   @media (max-width: 975px) {
     padding: 24px;
     .topContainer {
-      /* flex-direction: column; */
       gap: 16px;
       align-items: center;
       .leftContainer {

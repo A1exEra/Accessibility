@@ -7,7 +7,7 @@ const HeroSection = () => {
       <section className="heroText">
         <h1>Plant Your Dreams</h1>
         <div>
-          <h3>Your Home, Reimagined: Where Green Meets Serenity...</h3>
+          <h2>Your Home, Reimagined: Where Green Meets Serenity...</h2>
           <p>
             Discover the joy of houseplant care and revitalize your surroundings
             with nature's beauty. Find the perfect houseplants to create a
@@ -19,9 +19,7 @@ const HeroSection = () => {
         </div>
         <Button>Buy Now</Button>
       </section>
-      {/* <div className="image"> */}
       <img src={heroImg} alt="A big picture of a plant" />
-      {/* </div> */}
     </Styled>
   );
 };
@@ -35,7 +33,6 @@ const Styled = styled.main`
   gap: 18px;
   position: relative;
   .heroText {
-    /* width: 50%; */
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -45,7 +42,7 @@ const Styled = styled.main`
       color: ${({ theme }) => theme.colors.primary};
       font-size: ${({ theme }) => theme.fontSizes.head1};
     }
-    h3 {
+    h2 {
       color: ${({ theme }) => theme.colors.primary};
       font-size: ${({ theme }) => theme.fontSizes.head3};
     }
@@ -60,11 +57,6 @@ const Styled = styled.main`
   .image {
     flex: 1;
     height: 100%;
-    /* img {
-      max-width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } */
   }
   img {
     max-width: 100%;

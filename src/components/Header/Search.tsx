@@ -42,8 +42,10 @@ const Styled = styled.div`
     border: 2px solid ${({ theme }) => theme.colors.primary};
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    color: ${({ theme }) => theme.colors.grey};
     font-size: ${({ theme }) => theme.fontSizes.head4};
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.blue_grey};
+    }
   }
   button {
     width: 48px;

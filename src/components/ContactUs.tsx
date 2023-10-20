@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import contactImg from '../assets/images/feedback_img.jpg';
 import phoneIcon from '../assets/Icons/phone.svg';
 import emailIcon from '../assets/Icons/email.svg';
-import locationIcon from '../assets/Icons/Location.svg';
+import locationIcon from '../assets/Icons/location.svg';
 import facebook from '../assets/Icons/facebook.svg';
 import instagram from '../assets/Icons/instagram.svg';
 import twitter from '../assets/Icons/twitter.svg';
